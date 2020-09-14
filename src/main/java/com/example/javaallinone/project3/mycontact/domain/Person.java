@@ -1,7 +1,6 @@
 package com.example.javaallinone.project3.mycontact.domain;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,23 +8,24 @@ import javax.persistence.Id;
 import java.time.LocalDate;
 
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@RequiredArgsConstructor
+@Data
 public class Person {
     @Id
     @GeneratedValue
     private Long id;
 
-    @Getter
-    @Setter
+    @NonNull
     private String name;
 
-    @Getter
-    @Setter
+    @NonNull
     private int age;
 
     private String hobby;
 
-    @Getter
-    @Setter
+    @NonNull
     private String bloodType;
 
     private String address;
@@ -34,13 +34,6 @@ public class Person {
 
     private String job;
 
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                '}';
-    }
+    @ToString.Exclude
+    private String phoneNumber;
 }

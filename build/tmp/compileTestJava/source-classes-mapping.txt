@@ -1,6 +1,0 @@
-com/example/javaallinone/project3/mycontact/controller/HelloWorldControllerTest.java
- com.example.javaallinone.project3.mycontact.controller.HelloWorldControllerTest
-com/example/javaallinone/project3/mycontact/MycontactApplicationTests.java
- com.example.javaallinone.project3.mycontact.MycontactApplicationTests
-com/example/javaallinone/project3/mycontact/repository/PersonRepositoryTest.java
- com.example.javaallinone.project3.mycontact.repository.PersonRepositoryTest
