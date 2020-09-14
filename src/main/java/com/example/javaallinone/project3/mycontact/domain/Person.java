@@ -1,8 +1,12 @@
 package com.example.javaallinone.project3.mycontact.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.time.LocalDate;
 
 @Entity
 public class Person {
@@ -10,33 +14,26 @@ public class Person {
     @GeneratedValue
     private Long id;
 
+    @Getter
+    @Setter
     private String name;
 
+    @Getter
+    @Setter
     private int age;
 
-    public Long getId() {
-        return id;
-    }
+    private String hobby;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    @Getter
+    @Setter
+    private String bloodType;
 
-    public String getName() {
-        return name;
-    }
+    private String address;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    private LocalDate birthday;
 
-    public int getAge() {
-        return age;
-    }
+    private String job;
 
-    public void setAge(int age) {
-        this.age = age;
-    }
 
     @Override
     public String toString() {
