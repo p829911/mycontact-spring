@@ -22,7 +22,7 @@ class PersonRepositoryTest {
         person.setName("martin");
         person.setAge(10);
         person.setBloodType("A");
-
+    
         personRepository.save(person);
 
         System.out.println(personRepository.findAll());
