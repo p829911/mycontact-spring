@@ -1,8 +1,6 @@
 package com.example.javaallinone.project3.mycontact.service;
 
-import com.example.javaallinone.project3.mycontact.domain.Block;
 import com.example.javaallinone.project3.mycontact.domain.Person;
-import com.example.javaallinone.project3.mycontact.repository.BlockRepository;
 import com.example.javaallinone.project3.mycontact.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,8 +14,10 @@ public class PersonService {
     private PersonRepository personRepository;
 
     public List<Person> getPeopleExcludeBlocks() {
-        List<Person> people = personRepository.findAll();
+        return personRepository.findByBlockIsNull();
+    }
 
-        return people.stream().filter(person -> person.getBlock() == null).collect(Collectors.toList());
+    public List<Person> getPeopleByName(String name) {
+        return personRepository.findByName(name);
     }
 }
